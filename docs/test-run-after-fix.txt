@@ -1,0 +1,9 @@
+
+ RUN  v5.1.1 /home/claude/site-visit
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  23:27:24
+   Duration  13.45s (tests 99%)
+

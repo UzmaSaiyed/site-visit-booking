@@ -1,0 +1,34 @@
+
+ RUN  v5.1.1 /home/claude/site-visit
+
+ ❯ tests/bookings.test.ts (8 tests | 1 failed) 12975ms
+   ❯ double booking (4)
+     × allows only one of many simultaneous requests for the same slot 1519ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/bookings.test.ts > double booking > allows only one of many simultaneous requests for the same slot
+AssertionError: expected [ { status: 'fulfilled', …(1) }, …(9) ] to have a length of 1 but got 10
+
+- Expected
++ Received
+
+- 1
++ 10
+
+ ❯ tests/bookings.test.ts:31:16
+     29|       (r) => r.status === "rejected" && (r.reason as BookingError).sta…
+     30|     );
+     31|     expect(ok).toHaveLength(1);
+       |                ^
+     32|     expect(conflicts).toHaveLength(9);
+     33|     const rows = await db.query("SELECT * FROM bookings WHERE property…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 passed (8)
+   Start at  23:27:10
+   Duration  13.14s (tests 100%)
+
