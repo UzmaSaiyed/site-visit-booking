@@ -2,7 +2,7 @@
 
 A small full-stack app for a real-estate developer: a buyer picks a property, chooses a one-hour visit slot, and gets an instant confirmation. The sales team sees every booking on a password-protected admin page.
 
-**Live demo:** <!-- TODO: paste your Vercel URL --> · **Demo video (60s):** <!-- TODO: paste link -->
+**Live demo:** https://site-visit-booking.vercel.app/ · **Demo video (60s):** <!-- TODO: paste link -->
 
 > **The AI generated the booking flow. Its first version double-booked slots: it checked "is this slot free?" and then inserted, so 10 simultaneous requests all passed the check and all 10 got booked. A concurrency test caught it. The fix: a `UNIQUE (property_id, slot)` constraint in Postgres, with the API turning the violation into a clean `409 "slot was just booked"`.**
 
