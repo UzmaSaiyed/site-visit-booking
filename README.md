@@ -37,7 +37,8 @@ See [BUILD_LOG.md](BUILD_LOG.md) for what the AI wrote, what went wrong, and how
 ```bash
 npm install
 npm test          # 8 tests, real Postgres semantics via PGlite
-ADMIN_PASSWORD=demo123 npm run dev   # http://localhost:3000, data in ./.data
+ADMIN_PASSWORD= site-visit-demo
+npm run dev   # http://localhost:3000, data in ./.data
 ```
 
 ## Deploy (Vercel + Neon, free tiers)
